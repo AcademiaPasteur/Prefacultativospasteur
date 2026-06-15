@@ -1,4 +1,4 @@
-  <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/style.css">
 *{
     margin:0;
     padding:0;
@@ -146,7 +146,7 @@ nav ul li a{
 
 input,
 textarea{
-    width:100%;
+    max-width:100%;
     padding:15px;
     margin:10px 0;
     border:1px solid #ccc;
@@ -176,16 +176,32 @@ footer{
 
 @media(max-width:768px){
 
-    nav ul{
-        display:none;
+    nav{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
     }
 
+    nav ul{
+        display:flex;
+        flex-direction:row;
+        gap:10px;
+    }
+    nav ul li a{
+        font-size:14px;
+    }
+
+    .logo img{
+        height:70px;
+    }
+
+    .logo span{
+        font-size:16px;
+        margin-left:0;
+    }
     .hero{
         text-align:center;
-    }
-
-    .hero h1{
-        font-size:2.2rem;
     }
 }
 .logo{
@@ -229,27 +245,27 @@ footer{
     line-height:1.6;
 }
 .card-img1{
-    width:180px;
+    max-width:180px;
     display:block;
     margin:10px auto;
 }
 .card-img2{
-    width:90px;
+    max-width:90px;
     display:block;
     margin:10px auto;
 }
 .card-img3{
-    width:90px;
+    max-width:90px;
     display:block;
     margin:10px auto;
 }
 .card-img4{
-    width:140px;
+    max-width:140px;
     display:block;
     margin:10px auto;
 }
 .curso-cardPaquetes{
-    width: 1200px;
+    max-width: 1200px;
     margin: 40px auto;
     display: flex;
     background: #f2f2f2;
@@ -279,12 +295,12 @@ footer{
 }
 .paquete-info h2{
     color: #1e5ab6;
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 15px;
 }
 
 .paquete-info p{
-    font-size: 20px;
+    font-size: 30px;
     line-height: 1.8;
     margin-bottom: 25px;
 }
@@ -367,7 +383,7 @@ footer{
 }
 
 .anato-imagen{
-    width: 230px;
+    max-width: 230px;
     height: 250px;
      display: flex;
     justify-content: center;
@@ -412,7 +428,7 @@ footer{
 }
 
 .biologia-imagen{
-    width: 230px;
+    max-width: 230px;
     height: 250px;
 }
 
@@ -454,7 +470,7 @@ footer{
 }
 
 .soporte-imagen{
-    width: 230px;
+    max-width: 230px;
     height: 250px;
 }
 
@@ -496,7 +512,7 @@ footer{
 }
 
 .lenguaje-imagen{
-    width: 180px;
+    max-width: 180px;
     height: 240px;
 }
 
@@ -545,4 +561,176 @@ footer{
     right:40px;
     height:130px;
     width:auto;
+}
+.fondo{
+    right:40px;
+    height:130px;
+}
+@media (max-width: 768px){
+
+    /* Menú */
+    nav{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .logo{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img{
+        height: 90px;
+    }
+
+    .logo span{
+        margin-left: 0;
+        font-size: 22px;
+    }
+
+    /* Hero */
+    .hero{
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .hero p{
+        font-size: 1rem;
+    }
+
+    /* Tarjeta principal */
+    .curso-cardPaquetes{
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .paquete-img,
+    .paquete-info{
+    width:100%;
+    padding:15px;
+    overflow:hidden;
+}
+
+    .paquete-info h2
+    {
+        font-size:20px;
+        text-align:center;
+        line-height:1.4;
+    }
+    .paquete-info p{
+        font-size: 16px;
+    }
+
+    /* TODAS las materias */
+    .CursoAnatomia,
+    .CursoBiologia,
+    .CursoSoporte,
+    .CursoLenguaje{
+        width: 95%;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .texto{
+        width: 100%;
+    }
+
+    .texto h3{
+        font-size: 32px;
+    }
+
+    .texto p{
+        font-size: 18px;
+    }
+
+    .anato-imagen,
+    .biologia-imagen,
+    .soporte-imagen,
+    .lenguaje-imagen{
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        margin-top: 15px;
+    }
+
+    .anato-imagen img,
+    .biologia-imagen img,
+    .soporte-imagen img,
+    .lenguaje-imagen img{
+        width: 100%;
+        height: auto;
+    }
+
+    /* Botones */
+    .botones{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn{
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    /* Beneficios */
+    .cards{
+        grid-template-columns: 1fr;
+    }
+
+    /* Formulario */
+    input,
+    textarea{
+        width: 100%;
+    }
+
+    /* Títulos */
+    .section-title{
+        font-size: 1.8rem;
+    }
+
+    /* Página de contenido */
+    .titulo-pagina{
+        font-size: 24px;
+        text-align: center;
+        padding: 0 80px 0 10px;
+    }
+
+    .logo-superior{
+        height: 70px;
+        right: 10px;
+    }
+}
+html, body{
+    overflow-x: hidden;
+    width: 100%;
+}
+.redes-sociales{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-top:15px;
+}
+
+.redes-sociales a{
+    color:white;
+    font-size:35px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.redes-sociales a:hover{
+    transform:scale(1.2);
 }
