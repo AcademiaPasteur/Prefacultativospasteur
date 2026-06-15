@@ -1,2 +1,0 @@
-# Paginawebprefacultativospasteur
-PREFACULTATIVOS DE MEDICINA
